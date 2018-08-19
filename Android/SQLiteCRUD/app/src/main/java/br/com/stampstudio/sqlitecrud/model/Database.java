@@ -21,11 +21,11 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String sql = "CREATE TABLE " + TABLE + "("
-                + ID + "integer primary key autoincrement,"
-                + NAME + "text,"
-                + ADDRESS + "text,"
-                + AGE + "integer,"
-                + TELEPHONE + "text"
+                + ID + " integer primary key autoincrement,"
+                + NAME + " text,"
+                + ADDRESS + " text,"
+                + AGE + " integer,"
+                + TELEPHONE + " text"
                 + ")";
 
         sqLiteDatabase.execSQL(sql);
