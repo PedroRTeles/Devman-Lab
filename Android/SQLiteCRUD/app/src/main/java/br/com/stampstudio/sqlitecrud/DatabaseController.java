@@ -45,11 +45,11 @@ public class DatabaseController {
 
         cursor = sqLiteDatabase.query("user", fields, null, null, null, null, null);
 
-        database.close();
-
         if(cursor != null) {
             return cursor;
         }
+
+        database.close();
 
         return null;
     }

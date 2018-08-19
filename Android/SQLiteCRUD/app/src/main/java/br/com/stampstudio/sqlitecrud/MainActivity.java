@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(view == btnCreate) {
             intent = new Intent(MainActivity.this, CreateActivity.class);
+        } else if(view == btnList) {
+            intent = new Intent(MainActivity.this, ListActivity.class);
         }
 
         if(intent != null) {
