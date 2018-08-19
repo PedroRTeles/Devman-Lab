@@ -2,6 +2,7 @@ package br.com.stampstudio.sqlitecrud;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
@@ -33,5 +34,23 @@ public class DatabaseController {
 
         return result != -1;
 
+    }
+
+    public Cursor selectUsers() {
+        Cursor cursor;
+
+        String[] fields = {"_id", "name"};
+
+        sqLiteDatabase = database.getReadableDatabase();
+
+        cursor = sqLiteDatabase.query("user", fields, null, null, null, null, null);
+
+        database.close();
+
+        if(cursor != null) {
+            return cursor;
+        }
+
+        return null;
     }
 }
